@@ -1,15 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
-resource "azurerm_resource_group" "myresourcegroup" {
-  name     = "${var.prefix}-workshop"
-  location = var.location
-
-  tags = {
-    environment = "Production"
-  }
-}
 
 module "network" {
   source  = "app.terraform.io/leeml-org-azure2/network/azurerm"
